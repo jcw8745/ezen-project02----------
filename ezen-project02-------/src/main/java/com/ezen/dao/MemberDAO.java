@@ -262,8 +262,11 @@ public class MemberDAO {
 				rs = pstmt.executeQuery();
 				
 				
-				if (rs.next()) 
+				if (rs.next()) {
 					id=rs.getString("id");
+				}else {
+					id=null;
+				}
 				
 				
 			}catch (Exception e) {
@@ -279,5 +282,43 @@ public class MemberDAO {
 				}
 			}
 			return id;
+		  }
+	 
+	 public String findMemberPwd(String id,String name,String phone) { //비밀번호찾기
+		  String pwd=null;
+		  String sql="SELECT pwd FROM ezen_member WHERE id=? and name=? AND phone=?";
+		  Connection conn = null;
+			PreparedStatement pstmt = null;
+			ResultSet rs = null;
+			try {
+				conn = getConnection();
+				pstmt = conn.prepareStatement(sql);
+				pstmt.setString(1,id);
+				pstmt.setString(2,name);
+				pstmt.setString(3, phone);
+		
+				rs = pstmt.executeQuery();
+				
+				
+				if (rs.next()) {
+					pwd=rs.getString("pwd");
+				}else {
+					pwd=null;
+				}
+				
+				
+			}catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				try {
+					if (pstmt != null)
+						pstmt.close();
+					if (conn != null)
+						conn.close();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			return pwd;
 		  }
 }

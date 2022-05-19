@@ -25,8 +25,9 @@
 <td colspan="2" align="center">
 <input type="submit" class="btn btn-secondary" value="로그인" onclick="return loginCheck()">&nbsp;&nbsp;
 <input type="reset" class="btn btn-secondary" value="취소">&nbsp;&nbsp;
-<input type="button" class="btn btn-secondary" value="회원가입" onclick="location.href='join.do'">
+<input type="button" class="btn btn-secondary" value="회원가입" onclick="location.href='join.do'">&nbsp;&nbsp;
 <input type="button" class="btn btn-secondary" value="아이디 찾기" onclick="location.href='memberfind.do'">
+<input type="button" class="btn btn-secondary" value="비밀번호 찾기" onclick="location.href='memberfindpwd.do'">
 
 </td>
 </tr>

@@ -1,7 +1,6 @@
 package com.ezen.controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,20 +8,19 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import com.ezen.dao.MemberDAO;
+import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class MemberFindServlet
+ * Servlet implementation class MemberFindafterServlet
  */
-@WebServlet("/memberfind.do")
-public class MemberFindServlet extends HttpServlet {
+@WebServlet("/memberFindafter.do")
+public class MemberFindafterServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public MemberFindServlet() {
+    public MemberFindafterServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,30 +30,14 @@ public class MemberFindServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		String url="member/memberFindafter.jsp";
 		
-		
-		MemberDAO mDao=MemberDAO.getInstance();
-		
-		String name=request.getParameter("name");
-		String phone=request.getParameter("phone");
-		String id=mDao.findMember(name,phone);
-		request.setAttribute("id", id);
-		
-		response.setCharacterEncoding("UTF-8");
-		response.setContentType("text/html; charset=UTF-8");
-	
-		
-	
 
 		
-		// 진행중
-		System.out.println(id);
-		System.out.println(id);
-		System.out.println(id);
+	
 		
 		
-		
-		RequestDispatcher dispatcher=request.getRequestDispatcher("member/memberFind.jsp");
+		RequestDispatcher dispatcher=request.getRequestDispatcher(url);
 		dispatcher.forward(request, response);
 	}
 
@@ -65,7 +47,6 @@ public class MemberFindServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
-		
 	}
 
 }
