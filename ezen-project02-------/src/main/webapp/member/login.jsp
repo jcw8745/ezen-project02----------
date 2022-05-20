@@ -15,7 +15,7 @@ margin-right:auto;
 }
  td{
  	border: 1px solid;black;
- 	width: 200px;
+ 	width: 300px;
  	text-align: center;
  }
 </style>
