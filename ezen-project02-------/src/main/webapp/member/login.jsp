@@ -7,6 +7,18 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script type="text/javascript" src="script/member1.js"></script>
+<style type="text/css">
+h2 { text-align: center; }
+table{
+margin-left:auto;
+margin-right:auto;
+}
+ td{
+ 	border: 1px solid;black;
+ 	width: 200px;
+ 	text-align: center;
+ }
+</style>
 </head>
 <body>
 <h2>로그인</h2>

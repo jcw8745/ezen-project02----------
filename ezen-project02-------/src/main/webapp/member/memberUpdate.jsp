@@ -5,9 +5,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script type="text/javascript" src="script/member1.js"></script>
+<style type="text/css">
+h2 { text-align: center; }
+table{
+margin-left:auto;
+margin-right:auto;
+}
+ td{
+ 	border: 1px solid;black;
+ 	width: 220px;
+ 	text-align: center;
+ }
+</style>
 </head>
 <body>
 <h2>회원 수정</h2>
