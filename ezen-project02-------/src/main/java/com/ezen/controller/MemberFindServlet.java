@@ -41,8 +41,7 @@ public class MemberFindServlet extends HttpServlet {
 		String id=mDao.findMember(name,phone);
 		request.setAttribute("id", id);
 		
-		response.setCharacterEncoding("UTF-8");
-		response.setContentType("text/html; charset=UTF-8");
+	
 	
 		
 	

@@ -100,8 +100,8 @@ margin-right:auto;
 </tr>
 
 <tr>
-<td colspan="2">${message }</td></tr>
-
+<td colspan="2">${message }</td>
+</tr>
 
 </table>
 
