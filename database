@@ -1,0 +1,17 @@
+CREATE TABLE ezen_member(
+id varchar2(15) NOT NULL,
+pwd varchar2(15) NOT NULL,
+name varchar2(20) NOT NULL,
+phone varchar2(30),
+email varchar2(30),
+gender number(1) ,
+age number(3) NOT null,
+admin number(1),
+enter DATE DEFAULT sysdate,
+PRIMARY key(id)
+);
+
+
+INSERT INTO ezen_member values('cjfdnjs0111','1234','정철원','01087454728','cjfdnjs0111@nate.com',0,25,1,sysdate);
+
+INSERT INTO ezen_member values('cjfdnjs0222','1234','정철원','01087454728','cjfdnjs0111@nate.com',0,25,0,sysdate);
